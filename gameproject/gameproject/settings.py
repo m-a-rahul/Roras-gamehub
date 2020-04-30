@@ -26,7 +26,7 @@ SECRET_KEY = 'j6bf92iabw%xc%+gwpttz_m(4^*py33$v_!ogj%d5vc0$qpzpa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [roras.pythonanywhere.com]
 
 
 # Application definition
