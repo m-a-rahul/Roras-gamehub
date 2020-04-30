@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>onlineGames</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <style media="screen">
+
+    body
+    {
+      background-image: url("{%static "images/Image10.jpg"%}");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment:fixed;
+    }
+
+    .board button
+    {
+      height:100px;
+      width:100px;
+      border:1px solid black;
+      text-align: center;
+      font-size: 50px;
+      color: white;
+      font-weight: bold;
+      margin: 3px;
+      background-color: white;
+    }
+
+
+    #head2
+    {
+      font-family: 'Lobster';
+      font-style: italic;
+    }
+
+
+    table
+    {
+      margin-top: 50px;
+      margin-bottom:10px;
+      margin-left: 30px;
+      /* margin: 80px; */
+    }
+
+    #Restart
+    {
+      margin-left: 275px;
+    }
+
+
+    li
+    {
+      display: inline;
+    }
+
+
+    ul
+    {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+
+    li
+    {
+      float: left;
+    }
+
+    li a
+    {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+
+    li a:hover
+    {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      background-color: #009c10;
+    }
+
+
+    .active
+    {
+      background-color: #1c42ff;
+    }
+
+
+    li
+    {
+      border-right: 1px solid #bbb;
+    }
+
+
+    ul
+    {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    h2
+    {
+      display:inline;
+    }
+    h1
+    {
+      display:inline;
+    }
+    </style>
+
+    <nav class="navbar navbar-default ">
+        <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'gameapp:game1intro'%}">TicTacToe</a></li>
+        <li><a href="{% url 'gameapp:game2intro'%}">Connect Four</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+        <h2 style="margin-left:27px;" id='head2'>Tic Tac Toe </h2><h1>&#127919;</h1>
+        <table align='center' class='board'>
+          <tr>
+            <td><button type="button" name="button"></button></td>
+            <td><button type="button" name="button"></button></td>
+            <td><button type="button" name="button"></button></td>
+          </tr>
+          <tr>
+            <td><button type="button" name="button"></button></td>
+            <td><button type="button" name="button"></button></td>
+            <td><button type="button" name="button"></button></td>
+          </tr>
+          <tr>
+            <td><button type="button" name="button"></button></td>
+            <td><button type="button" name="button"></button></td>
+            <td><button type="button" name="button"></button></td>
+          </tr>
+        </table>
+        <button class='btn btn-primary'id="Restart" type="button" name="button">Restart</button>
+        <h5 style='margin-left:32px;margin-top:50px;' ></h5>
+
+      </div>
+
+      <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+      </script>
+      <script src="{%static "javascript/1Gamemodemedium.js"%}">
+      </script>
+
+
+
+  </body>
+</html>

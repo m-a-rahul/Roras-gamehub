@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Feedback</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <style media="screen">
+    body{
+      background-color:#e4e7e8;
+    }
+    h1{
+      margin-top: 50px;
+    }
+      .form{
+        border-top:10px solid #6f42aa;
+
+        text-align: center;
+        margin-top: 70px;
+        background-color: white;
+        border-radius: 20px;
+        padding:100px;
+        padding-bottom: 0px;
+      }
+      #para1{
+        font-size: 10px;
+        padding-bottom: 10px;
+      }
+      #submit{
+        margin-top: 30px;
+        margin-left:280px;
+        margin-bottom: 50px;
+      }
+      #feed{
+        margin-left: 5%;
+      }
+      #back{
+        margin-right:150px;
+      }
+    </style>
+    <div class="container">
+      <h1>Website Review</h1>
+      <div class="form">
+        <form class="form-horizontal" method="POST">
+          <div class="form-group">
+            <label>Name:</label>
+            {{ form.name }}
+          </div>
+          <div class="form-group">
+            <label>Email:</label>
+            {{ form.email}}
+          </div>
+          <label id="back">Feedback:</label>
+          <div id='feed'class="form-group">
+
+            {{ form.feedback}}
+          </div>
+
+          {% csrf_token %}
+          <br>
+          <input id="submit" type="submit" class='btn btn-primary' value="Send">
+          <p id="para1">* Fill in the feedback textarea with your critics and comments.Thank you so much for reviewing the website* </p>
+
+
+        </form>
+      </div>
+  </div>
+
+
+
+  </body>
+</html>

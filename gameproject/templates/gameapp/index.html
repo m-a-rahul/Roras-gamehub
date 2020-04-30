@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>onlineGames</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body >
+
+    <style media="screen">
+    .div1
+    {
+      background-color: red;
+      border-bottom: 10px solid red;
+      border-left: 50px solid red;
+      border-right : 50px solid red;
+      border-top: 90px solid red;
+
+      margin-bottom: 10px;
+      border-radius: 3px;
+    }
+
+    #p1
+    {
+      color:white;
+      font-size: 12px;
+      padding-bottom: 3px;
+    }
+    #feedback
+    {
+      color:white;
+
+      font-size: 12px;
+      padding-bottom: 5px;
+    }
+    ol
+    {
+      margin-top: 30px;
+      padding-bottom: 20px;
+      border: 5px solid white;
+      font-size: 20px;
+      font-family: 'Playfair Display', serif;
+      color: black;
+      background-color: #f3f3f3;
+    }
+
+    li
+    {
+      display: inline;
+    }
+
+    #Tabs
+    {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid #e7e7e7;
+      background-color: #f3f3f3;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    li
+    {
+      float: left;
+    }
+
+    li a
+    {
+      display: block;
+      color: #666;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover
+    {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      background-color: #008cba;
+    }
+
+    .active
+    {
+      background-color: #4CAF50;
+    }
+
+    </style>
+
+    <nav class="navbar navbar-default ">
+        <ul id='Tabs'>
+          <li style="float:right"><a href="{% url 'gameapp:game2'%}">Connect Four</a></li>
+          <li style="float:right"><a href="{% url 'gameapp:game1'%}">TicTacToe</a></li>
+          <li style="float:right"><a href="{% url 'index' %}">Home</a></li>
+      </ul>
+    </nav>
+
+      <div class="container">
+
+           <img align='left'width="80%" src="{%static "images/Image1.jpg"%}" alt="">
+           <img width="20%"src="{%static "images/Image2.gif"%}" alt="">
+           <img align='left'width="100%" src="{%static "images/Image3.jpg"%}" alt="">
+
+
+         <div class="div1">
+           <div class="row">
+             <div class="col-xs-4 col-md-4 thumbnail"><a href="{% url 'gameapp:game1'%}"><img src="{%static "images/Image4.jpg"%}" alt=""></a></div>
+             <div class="col-xs-4 col-md-4 thumbnail"><a href="{% url 'gameapp:game2'%}"><img src="{%static "images/Image5.jpg"%}" alt=""></a></div>
+             <div class="col-xs-4 col-md-4 thumbnail"><img src="{%static "images/Image6.jpeg"%}" alt=""></div>
+           </div>
+           <p align='left' id='p1'>This website allows you to relive your school memories by challenging your friends on those crazy notebook games which everyone used to endure during their childhood days. Currently there are two games available, click on the image above and fall in. Catch you up with much more fun soon. Nothing personal just performing the international duty of spreading happiness #rorasgamehub</p>
+           <a id='feedback'style="font-size:13px;"href="{% url 'gameapp:feedback'%}"><u>Suggestions & Feedbacks</u></a>
+
+         </div>
+
+
+      </div>
+  </body>
+</html>
