@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-    <style media="screen">
-
-    body
+     <style media="screen and (orientation: landscape)">
+     body
     {
       background-image: url("{%static "images/Image10.jpg"%}");
       background-repeat: no-repeat;
@@ -36,6 +35,7 @@
     {
       font-family: 'Lobster';
       font-style: italic;
+      font-size:3vw;
     }
 
 
@@ -49,7 +49,7 @@
 
     #Restart
     {
-      margin-left: 275px;
+      margin-left: 250px;
     }
 
 
@@ -122,39 +122,187 @@
     {
       display:inline;
     }
+    #head5
+    {
+        margin-top:40px;
+        margin-left:30px;
+    }
+
     </style>
 
-    <nav class="navbar navbar-default ">
-        <ul>
-        <li><a href="{% url 'index' %}">Home</a></li>
-        <li><a href="{% url 'gameapp:game1'%}">TicTacToe</a></li>
-        <li><a href="{% url 'gameapp:game2'%}">Connect Four</a></li>
-      </ul>
-    </nav>
+    <style media="screen and (orientation: portrait)">
 
-    <div class="container">
-        <h2 style="margin-left:27px;" id='head2'>Tic Tac Toe </h2><h1>&#127919;</h1>
-        <table align='center' class='board'>
-          <tr>
-            <td><button type="button" name="button"></button></td>
-            <td><button type="button" name="button"></button></td>
-            <td><button type="button" name="button"></button></td>
-          </tr>
-          <tr>
-            <td><button type="button" name="button"></button></td>
-            <td><button type="button" name="button"></button></td>
-            <td><button type="button" name="button"></button></td>
-          </tr>
-          <tr>
-            <td><button type="button" name="button"></button></td>
-            <td><button type="button" name="button"></button></td>
-            <td><button type="button" name="button"></button></td>
-          </tr>
-        </table>
-        <button class='btn btn-primary'id="Restart" type="button" name="button">Restart</button>
-        <h5 style='margin-left:32px;margin-top:50px;' ></h5>
+    body
+    {
+      background-image: url("{%static "images/Image11.jpg"%}");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment:fixed;
+    }
 
-      </div>
+
+
+
+
+       table
+    {
+      margin-top: 100px;
+      margin-bottom:50px;
+      margin-left: 30px;
+      /* margin: 80px; */
+    }
+
+    .board button
+    {
+      height:22vw;
+      width:22vw;
+      border:1px solid black;
+      text-align: center;
+      font-size: 100px;
+      color: white;
+      font-weight: bold;
+      margin: 3px;
+      background-color: white;
+    }
+
+    #head2
+    {
+      font-family: 'Lobster';
+      font-style: italic;
+      font-size:7vw;
+    }
+
+
+
+
+    #Restart
+    {
+        font-size:4vw;
+      margin-left: 54vw;
+    }
+
+
+    li
+    {
+      display: inline;
+    }
+
+
+    ul
+    {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+
+    li
+    {
+      float: left;
+    }
+
+    li a
+    {
+        font-size:3vw;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+
+    li a:hover
+    {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      background-color: #009c10;
+    }
+
+
+    .active
+    {
+      background-color: #1c42ff;
+    }
+
+
+    li
+    {
+      border-right: 1px solid #bbb;
+    }
+
+
+    ul
+    {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    #head5
+    {
+        text-align:center;
+        background-color:#f6d35b;width:64vw;
+        margin-left:3vw;
+        margin-top:5vw;
+        font-size:3vw;
+    }
+
+
+    h2
+    {
+
+      display:inline;
+    }
+    h1
+    {
+        font-size:5vw;
+      display:inline;
+    }
+    .head
+    {
+        margin-top:10vw;
+    }
+
+
+    </style>
+
+  <nav class="navbar navbar-default ">
+      <ul>
+      <li><a href="{% url 'index' %}">Home</a></li>
+      <li><a href="{% url 'gameapp:game1'%}">TicTacToe</a></li>
+      <li><a href="{% url 'gameapp:game2'%}">Connect Four</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+      <div class="head"><h2 style="margin-left:27px;" id='head2'>Tic Tac Toe </h2><h1 >&#127919;</h1></div>
+
+      <table align='center' class='board'>
+        <tr>
+          <td><button type="button" name="button"></button></td>
+          <td><button type="button" name="button"></button></td>
+          <td><button type="button" name="button"></button></td>
+        </tr>
+        <tr>
+          <td><button type="button" name="button"></button></td>
+          <td><button type="button" name="button"></button></td>
+          <td><button type="button" name="button"></button></td>
+        </tr>
+        <tr>
+          <td><button type="button" name="button"></button></td>
+          <td><button type="button" name="button"></button></td>
+          <td><button type="button" name="button"></button></td>
+        </tr>
+      </table>
+      <button class='btn btn-success btn-lg'id="Restart" type="button" name="button">Restart</button>
+      <h5 id="head5"  ></h5>
+
+    </div>
 
       <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -381,8 +529,8 @@
           {
             for (var row = 0; row < 4; row++)
             {
-            $('h5').text("Press RESTART and jump in again!").css("fontSize", "15px")
-              $('h2').text("Well, Cheers "+winningPlayer+"! ").css("fontSize", "30px")
+            $('h5').text("Press RESTART and jump in again!")
+              $('h2').text("Well, Cheers "+winningPlayer+"! ")
               return win=true;
             }
           }
@@ -400,8 +548,8 @@
           {
             for (var row = 0; row < 4; row++)
             {
-              $('h2').text("You guys Twinned! ").css("fontSize", "30px")
-              $('h5').text("Press RESTART and jump in again!").css("fontSize", "15px")
+              $('h2').text("You guys Twinned! ")
+              $('h5').text("Press RESTART and jump in again!")
               return win=false;
             }
           }
