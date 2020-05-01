@@ -9,9 +9,10 @@
   </head>
   <body >
 
-    <style media="screen">
+    <style media="screen and (orientation: landscape)">
     .div1
     {
+        margin-top:20px;
       background-color: red;
       border-bottom: 10px solid red;
       border-left: 50px solid red;
@@ -93,8 +94,120 @@
     {
       background-color: #4CAF50;
     }
+    #brand{
+        height:16vw;
+    }
+
+
 
     </style>
+     <style media="screen and (orientation: portrait)">
+
+         .div1
+    {
+        margin-top:20px;
+      background-color: red;
+      border-bottom: 10px solid red;
+      border-left: 50px solid red;
+      border-right : 50px solid red;
+      border-top: 70px solid red;
+
+      margin-bottom: 10px;
+      border-radius: 3px;
+    }
+
+    #p1
+    {
+      color:white;
+      font-size: 2vw;
+      padding-bottom: 3px;
+    }
+    #feedback
+    {
+      color:white;
+      padding-bottom: 5px;
+      font-size: 4vw;
+    }
+        ol
+    {
+      margin-top: 30px;
+      padding-bottom: 20px;
+      border: 5px solid white;
+      font-size: 20px;
+      font-family: 'Playfair Display', serif;
+      color: black;
+      background-color: #f3f3f3;
+    }
+
+    li
+    {
+      display: inline;
+    }
+
+    #Tabs
+    {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid #e7e7e7;
+      background-color: #f3f3f3;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    li
+    {
+      float: left;
+    }
+
+    li a
+    {
+        font-size:3vw;
+      display: block;
+      color: #666;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover
+    {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      background-color: #008cba;
+    }
+
+    .active
+    {
+      background-color: #4CAF50;
+    }
+    #disappear
+    {
+        display:none;
+    }
+    #img1{
+        width:100%;
+        height:auto;
+        padding:10px;
+    }
+    #img2{
+        width:100%;
+        height:auto;
+        padding:10px;
+    }
+    #brand
+    {
+        margin-top:2vw;
+        height:15vw;
+    }
+
+     </style>
 
     <nav class="navbar navbar-default ">
         <ul id='Tabs'>
@@ -104,23 +217,25 @@
       </ul>
     </nav>
 
-      <div class="container">
+      <!--<div class="container">-->
+            <div class="top">
+                <img align='left'width="80%"id="brand" src="{%static "images/Game1.jpg"%}" alt="">
+                <img style:"border-top:10px solid white" width="20%"src="{%static "images/Image2.gif"%}" alt="">
+            </div>
 
-           <img align='left'width="80%" src="{%static "images/Image1.jpg"%}" alt="">
-           <img width="20%"src="{%static "images/Image2.gif"%}" alt="">
            <img align='left'width="100%" src="{%static "images/Image3.jpg"%}" alt="">
 
 
          <div class="div1">
            <div class="row">
-             <div class="col-xs-4 col-md-4 thumbnail"><a href="{% url 'gameapp:game1'%}"><img src="{%static "images/Image4.jpg"%}" alt=""></a></div>
-             <div class="col-xs-4 col-md-4 thumbnail"><a href="{% url 'gameapp:game2'%}"><img src="{%static "images/Image5.jpg"%}" alt=""></a></div>
-             <div class="col-xs-4 col-md-4 thumbnail"><img src="{%static "images/Image6.jpeg"%}" alt=""></div>
+             <div class="col-xs-6 col-md-4 thumbnail"><a href="{% url 'gameapp:game1'%}"><img id="img1"src="{%static "images/Image4.jpg"%}" alt=""></a></div>
+             <div class="col-xs-6 col-md-4 thumbnail"><a href="{% url 'gameapp:game2'%}"><img id="img2"src="{%static "images/Image5.jpg"%}" alt=""></a></div>
+             <div class="col-xs-0 col-md-4 thumbnail"><img id="disappear"src="{%static "images/Image6.jpeg"%}" alt=""></div>
            </div>
            <p align='left' id='p1'>This website allows you to relive your school memories by challenging your friends on those crazy notebook games which everyone used to endure during their childhood days. Currently there are two games available, click on the image above and fall in. Catch you up with much more fun soon. Nothing personal just performing the international duty of spreading happiness #rorasgamehub</p>
-           <a id='feedback'style="font-size:13px;"href="{% url 'gameapp:feedback'%}"><u>Suggestions & Feedbacks</u></a>
+           <a id='feedback'href="{% url 'gameapp:feedback'%}"><u>Suggestions & Feedbacks</u></a>
 
-         </div>
+         <!--</div>-->
 
 
       </div>
