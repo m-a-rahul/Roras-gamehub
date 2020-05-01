@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-    <style >
+   <style media="screen and (orientation: landscape)">
     body
     {
       background-image: url("{%static "images/Image21.jpg"%}");
@@ -110,6 +110,126 @@
       top: 0;
       width: 100%;
     }
+    #head5
+    {
+        background-color:#c5f8ac;width:372px;border-top: 3px solid #c5f8ac;margin-left:390px;margin-top:30px;
+    }
+
+
+    </style>
+    <style media="screen and (orientation: portrait)">
+    body
+    {
+      background-image: url("{%static "images/Image22.jpg"%}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment:fixed;
+    }
+    h5
+    {
+      text-align: center;
+    }
+
+    h1
+    {
+      text-align: center;
+    }
+
+    #head2
+    {
+        margin-top:10vw;
+        margin-bottom:10vw;
+      font-family: 'Pacifico';
+      font-family: 'Satisfy';
+      font-size:8vw;
+    }
+
+    .board button
+    {
+      border: 2px solid #175dde;
+      border-radius: 50%;
+      height :10vw;width: 10vw;
+      background-color: #1348a2;
+    }
+    table
+    {
+      align:center;
+      margin-top: 10px;
+
+    }
+    #Restart
+    {
+        font-size:4vw;
+      margin-left: 58vw;
+      margin-bottom:1vw;
+    }
+
+    .board
+    {
+    background-color:#175dde;
+    border: 2vw solid #175dde;
+    }
+
+
+    li
+    {
+      display: inline;
+    }
+
+    ul
+    {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li
+    {
+      float: left;
+    }
+
+    li a
+    {
+        font-size:3vw;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover
+    {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      background-color: #009c10;
+    }
+
+    .active
+    {
+      background-color: #1c42ff;
+    }
+
+    li
+    {
+      border-right: 1px solid #bbb;
+    }
+
+    ul
+    {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    #head5
+    {
+        background-color:#ffe577;margin: 0 auto;font-size:3vw;border-top: 7px solid #ffe577;border-bottom:5px solid #ffe577;
+    }
 
 
     </style>
@@ -183,7 +303,7 @@
     </tr>
   </table>
 
-<h5 style="background-color:#c4fbac;width:372px;margin: 0 auto;border-top: 7px solid #c4fbac;border-bottom:5px solid #c4fbac;"></h5>
+<h5 id="head5"></h5>
 </div>
 <script
 src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -418,8 +538,8 @@ crossorigin="anonymous">
       {
         for (var row = 0; row < 7; row++)
         {
-          $('h5').text("Press RESTART and Enjoy playing again ").css("fontSize", "15px")
-          $('h1').text("Well, Cheers "+winningPlayer+"! ").css("fontSize", "30px")
+          $('h5').text("Press RESTART and Enjoy playing again ")
+          $('h1').text("Well, Cheers "+winningPlayer+"! ")
           return win=true;
         }
       }
@@ -445,8 +565,8 @@ crossorigin="anonymous">
       {
         for (var row = 0; row < 7; row++)
         {
-          $('h5').text("Press RESTART and jump in again!").css("fontSize", "15px")
-          $('h1').text("You guys Twinned! ").css("fontSize", "30px")
+          $('h5').text("Press RESTART and jump in again!")
+          $('h1').text("You guys Twinned! ")
           return win=false;
         }
       }
