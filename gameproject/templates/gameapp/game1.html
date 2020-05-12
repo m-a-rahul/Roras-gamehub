@@ -4,24 +4,28 @@
   <head>
     <meta charset="utf-8">
     <title>onlineGames</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
 
-     <style media="screen and (orientation: landscape)">
+   <style media="screen and (min-width: 1025px)">
      body
     {
       background-image: url("{%static "images/Image7.jpg"%}");
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment:fixed;
+      overflow: hidden;
     }
 
     .board button
     {
-      height:100px;
-      width:100px;
+      height:120px;
+      width:120px;
       border:1px solid black;
       text-align: center;
       font-size: 50px;
@@ -43,77 +47,11 @@
     table
     {
       margin-top: 50px;
-      margin-bottom:10px;
+      margin-bottom:30px;
       margin-left: 30px;
       /* margin: 80px; */
     }
 
-    #Restart
-    {
-      margin-left: 250px;
-    }
-
-
-    li
-    {
-      display: inline;
-    }
-
-
-    ul
-    {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-    }
-
-
-    li
-    {
-      float: left;
-    }
-
-    li a
-    {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-
-    li a:hover
-    {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      background-color: #009c10;
-    }
-
-
-    .active
-    {
-      background-color: #1c42ff;
-    }
-
-
-    li
-    {
-      border-right: 1px solid #bbb;
-    }
-
-
-    ul
-    {
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
 
     h2
     {
@@ -170,6 +108,272 @@
     {
         padding: 5%;padding-left: 8%;color: white;border-radius:100px ;border: 1px solid #da524b;background-color: #da524b;font-weight:bold ;font-size: 18px;width:70%;display:block;margin-top:auto;margin-bottom:0%;margin: 0 auto;
     }
+   #wrapper
+   {
+     width:100%;
+     margin:0;
+   }
+   #first_div
+   {
+     margin-top: 50px;
+     width:40%;
+     float:left;
+
+   }
+   #second_div
+   {
+     width:17%;
+     float: left;
+   }
+   .scoreboard{
+     background-color: #4b4b4d;
+     margin-top: 150px;
+     border: 1.5px solid white;
+     border-radius: 10px;
+ padding: 10px;
+
+   }
+   #score1
+   {
+     font-size:40px;
+     font-family: 'Press Start 2P';
+     background-color:black;color:#8aec4b;padding-top: 5px;padding-bottom: 5px;padding-right:5px;padding-left:5px;border: 5px solid black;border-radius: 5px;
+   }
+   #score2
+   {
+     font-size:40px;
+     font-family: 'Press Start 2P';
+     background-color:black;color:#8aec4b;padding-top: 5px;padding-bottom: 5px;padding-right:7px;padding-left:7px;border: 5px solid black;border-radius: 5px;margin-bottom: 5px;
+   }
+ #playerlabel{
+   font-size:23px;font-family: 'VT323', monospace;
+   background-color:black;color:red;padding-right:17px;padding-left:17px;border: 5px solid black;border-radius: 5px;
+ }
+ #computerlabel
+ {
+   font-size:23px;font-family: 'VT323', monospace;
+   background-color:black;color:red;padding-right:10px;padding-left:10px;border: 5px solid black;border-radius: 5px;margin-bottom: 5px;
+ }
+ #homeicon,#refreshicon,#menuicon{
+   background-color: #4b4b4d;
+   font-size:36px;
+   border-radius: 5px;
+   margin-top:8px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-left: 5px;
+   margin-right: 4px;
+ }
+ #menuicon
+ {
+   color:gray;
+ }
+ #refreshicon{
+   color: #337ab7;
+ }
+
+ #homeicon
+ {
+   color:white;
+   margin-left: 7px;
+ }
+   marquee
+   {
+     font-size:20px;
+     background: black;
+     color:red;
+     font-family: 'VT323', monospace;
+     display: flex;
+     align-items: center;
+     height:30px;
+     width:210px;
+     border-radius: 5px;
+   }
+
+
+
+
+
+   .pyro > .before, .pyro > .after {
+   position: absolute;
+   width: 8px;
+   height: 8px;
+   border-radius: 40%;
+   box-shadow: -120px -218.66667px blue, 248px -16.66667px #00ff84, 190px 16.33333px #002bff, -113px -308.66667px #ff009d, -109px -287.66667px #ffb300, -50px -313.66667px #ff006e, 226px -31.66667px #ff4000, 180px -351.66667px #ff00d0, -12px -338.66667px #00f6ff, 220px -388.66667px #99ff00, -69px -27.66667px #ff0400, -111px -339.66667px #6200ff, 155px -237.66667px #00ddff, -152px -380.66667px #00ffd0, -50px -37.66667px #00ffdd, -95px -175.66667px #a6ff00, -88px 10.33333px #0d00ff, 112px -309.66667px #005eff, 69px -415.66667px #ff00a6, 168px -100.66667px #ff004c, -244px 24.33333px #ff6600, 97px -325.66667px #ff0066, -211px -182.66667px #00ffa2, 236px -126.66667px #b700ff, 140px -196.66667px #9000ff, 125px -175.66667px #00bbff, 118px -381.66667px #ff002f, 144px -111.66667px #ffae00, 36px -78.66667px #f600ff, -63px -196.66667px #c800ff, -218px -227.66667px #d4ff00, -134px -377.66667px #ea00ff, -36px -412.66667px #ff00d4, 209px -106.66667px #00fff2, 91px -278.66667px #000dff, -22px -191.66667px #9dff00, 139px -392.66667px #a6ff00, 56px -2.66667px #0099ff, -156px -276.66667px #ea00ff, -163px -233.66667px #00fffb, -238px -346.66667px #00ff73, 62px -363.66667px #0088ff, 244px -170.66667px #0062ff, 224px -142.66667px #b300ff, 141px -208.66667px #9000ff, 211px -285.66667px #ff6600, 181px -128.66667px #1e00ff, 90px -123.66667px #c800ff, 189px 70.33333px #00ffc8, -18px -383.66667px #00ff33, 100px -6.66667px #ff008c;
+   -moz-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+   -webkit-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+   -o-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+   -ms-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+   animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards; }
+
+   .pyro > .after {
+   -moz-animation-delay: 1.25s, 1.25s, 1.25s;
+   -webkit-animation-delay: 1.25s, 1.25s, 1.25s;
+   -o-animation-delay: 1.25s, 1.25s, 1.25s;
+   -ms-animation-delay: 1.25s, 1.25s, 1.25s;
+   animation-delay: 1.25s, 1.25s, 1.25s;
+   -moz-animation-duration: 1.25s, 1.25s, 6.25s;
+   -webkit-animation-duration: 1.25s, 1.25s, 6.25s;
+   -o-animation-duration: 1.25s, 1.25s, 6.25s;
+   -ms-animation-duration: 1.25s, 1.25s, 6.25s;
+   animation-duration: 1.25s, 1.25s, 6.25s; }
+
+   @-webkit-keyframes bang {
+   from {
+     box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+   @-moz-keyframes bang {
+   from {
+     box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+   @-o-keyframes bang {
+   from {
+     box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+   @-ms-keyframes bang {
+   from {
+     box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+   @keyframes bang {
+   from {
+     box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+   @-webkit-keyframes gravity {
+   to {
+     transform: translateY(200px);
+     -moz-transform: translateY(200px);
+     -webkit-transform: translateY(200px);
+     -o-transform: translateY(200px);
+     -ms-transform: translateY(200px);
+     opacity: 0; } }
+   @-moz-keyframes gravity {
+   to {
+     transform: translateY(200px);
+     -moz-transform: translateY(200px);
+     -webkit-transform: translateY(200px);
+     -o-transform: translateY(200px);
+     -ms-transform: translateY(200px);
+     opacity: 0; } }
+   @-o-keyframes gravity {
+   to {
+     transform: translateY(200px);
+     -moz-transform: translateY(200px);
+     -webkit-transform: translateY(200px);
+     -o-transform: translateY(200px);
+     -ms-transform: translateY(200px);
+     opacity: 0; } }
+   @-ms-keyframes gravity {
+   to {
+     transform: translateY(200px);
+     -moz-transform: translateY(200px);
+     -webkit-transform: translateY(200px);
+     -o-transform: translateY(200px);
+     -ms-transform: translateY(200px);
+     opacity: 0; } }
+   @keyframes gravity {
+   to {
+     transform: translateY(200px);
+     -moz-transform: translateY(200px);
+     -webkit-transform: translateY(200px);
+     -o-transform: translateY(200px);
+     -ms-transform: translateY(200px);
+     opacity: 0; } }
+   @-webkit-keyframes position {
+     0%, 19.9% {
+       margin-top: 10%;
+       margin-left: 40%; }
+
+     20%, 39.9% {
+       margin-top: 40%;
+       margin-left: 30%; }
+
+     40%, 59.9% {
+       margin-top: 20%;
+       margin-left: 70%; }
+
+     60%, 79.9% {
+       margin-top: 30%;
+       margin-left: 20%; }
+
+     80%, 99.9% {
+       margin-top: 30%;
+       margin-left: 80%; } }
+   @-moz-keyframes position {
+     0%, 19.9% {
+       margin-top: 10%;
+       margin-left: 40%; }
+
+     20%, 39.9% {
+       margin-top: 40%;
+       margin-left: 30%; }
+
+     40%, 59.9% {
+       margin-top: 20%;
+       margin-left: 70%; }
+
+     60%, 79.9% {
+       margin-top: 30%;
+       margin-left: 20%; }
+
+     80%, 99.9% {
+       margin-top: 30%;
+       margin-left: 80%; } }
+   @-o-keyframes position {
+     0%, 19.9% {
+       margin-top: 10%;
+       margin-left: 40%; }
+
+     20%, 39.9% {
+       margin-top: 40%;
+       margin-left: 30%; }
+
+     40%, 59.9% {
+       margin-top: 20%;
+       margin-left: 70%; }
+
+     60%, 79.9% {
+       margin-top: 30%;
+       margin-left: 20%; }
+
+     80%, 99.9% {
+       margin-top: 30%;
+       margin-left: 80%; } }
+   @-ms-keyframes position {
+   0%, 19.9% {
+     margin-top: 10%;
+     margin-left: 40%; }
+
+   20%, 39.9% {
+     margin-top: 40%;
+     margin-left: 30%; }
+
+   40%, 59.9% {
+     margin-top: 20%;
+     margin-left: 70%; }
+
+   60%, 79.9% {
+     margin-top: 30%;
+     margin-left: 20%; }
+
+   80%, 99.9% {
+     margin-top: 30%;
+     margin-left: 80%; } }
+   @keyframes position {
+     0%, 19.9% {
+       margin-top: 30%;
+       margin-left: 70%; }
+
+     20%, 39.9% {
+       margin-top: 10%;
+       margin-left: 10%; }
+
+     40%, 59.9% {
+       margin-top: 30%;
+       margin-left: 10%; }
+
+     60%, 79.9% {
+       margin-top: 30%;
+       margin-left: 50%; }
+
+     80%, 99.9% {
+       margin-top: 20%;
+       margin-left: 60%; } }
+
     </style>
 
     <style media="screen and (orientation: portrait)">
@@ -209,81 +413,21 @@
 
     #head2
     {
+      display:inline;
       font-family: 'Lobster';
       font-style: italic;
       font-size:7vw;
     }
 
 
-
-
-    #Restart
+    h2
     {
-        font-size:4vw;
-      margin-left: 54vw;
+      display:inline;
     }
-
-
-    li
+    h1
     {
-      display: inline;
-    }
-
-
-    ul
-    {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-    }
-
-
-    li
-    {
-      float: left;
-    }
-
-    li a
-    {
-        font-size:3vw;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-
-    li a:hover
-    {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      background-color: #009c10;
-    }
-
-
-    .active
-    {
-      background-color: #1c42ff;
-    }
-
-
-    li
-    {
-      border-right: 1px solid #bbb;
-    }
-
-
-    ul
-    {
-      position: fixed;
-      top: 0;
-      width: 100%;
+        font-size:6vw;
+      display:inline;
     }
     #head5
     {
@@ -294,17 +438,6 @@
         font-size:3vw;
     }
 
-
-    h2
-    {
-
-      display:inline;
-    }
-    h1
-    {
-        font-size:5vw;
-      display:inline;
-    }
     .head
     {
         margin-top:10vw;
@@ -352,6 +485,260 @@
     {
         padding: 5%;padding-left: 8%;color: white;border-radius:100px ;border: 1px solid #da524b;background-color: #da524b;font-weight:bold ;font-size: 7vw;width:50vw;display:block;margin-top:auto;margin-bottom:0%;margin: 0 auto;
     }
+
+marquee
+   {
+     font-size:5vw;
+     background: black;
+     color:red;
+     font-family: 'VT323', monospace;
+     display: flex;
+     align-items: center;
+     height:7vw;
+     width:54vw;
+     border-radius: 5px;
+   }
+
+#second_div
+{
+    margin-left:20%;
+    margin-right:20%;
+}
+
+   .scoreboard{
+     background-color: #4b4b4d;
+     margin-top: 150px;
+     border: 5px solid white;
+     border-radius: 10px;
+ padding: 2.5vw;
+
+   }
+   #score1
+   {
+     font-size:9vw;
+     font-family: 'Press Start 2P';
+     background-color:black;color:#8aec4b;padding-top: 20px;padding-bottom: 20px;padding-right:38px;padding-left:38px;border: 5px solid black;border-radius: 5px;
+   }
+   #score2
+   {
+     font-size:9vw;
+     font-family: 'Press Start 2P';
+     background-color:black;color:#8aec4b;padding-top: 20px;padding-bottom: 20px;padding-right:38px;padding-left:38px;border: 5px solid black;border-radius: 5px;margin-bottom: 5px;
+   }
+ #playerlabel{
+   font-size:7vw;font-family: 'VT323', monospace;
+   background-color:black;color:red;padding-right:45px;padding-left:45px;border: 5px solid black;border-radius: 5px;
+ }
+ #computerlabel
+ {
+   font-size:7vw;font-family: 'VT323', monospace;
+   background-color:black;color:red;padding-right:15px;padding-left:15px;border: 5px solid black;border-radius: 5px;margin-bottom: 5px;
+ }
+ #homeicon,#refreshicon,#menuicon{
+   background-color: #4b4b4d;
+   font-size:11vw;
+   border-radius: 5px;
+   margin-top:8px;
+   padding-left: 30px;
+   padding-right: 30px;
+   margin-left: 5px;
+   margin-right: 4px;
+ }
+ #menuicon
+ {
+   color:gray;
+ }
+ #refreshicon{
+   color: #337ab7;
+ }
+
+ #homeicon
+ {
+   color:white;
+   margin-left: 15px;
+ }
+
+
+
+   .pyro > .before, .pyro > .after {
+   position: absolute;
+   width: 15px;
+   height: 15px;
+   border-radius: 40%;
+   box-shadow: -120px -218.66667px blue, 248px -16.66667px #00ff84, 190px 16.33333px #002bff, -113px -308.66667px #ff009d, -109px -287.66667px #ffb300, -50px -313.66667px #ff006e, 226px -31.66667px #ff4000, 180px -351.66667px #ff00d0, -12px -338.66667px #00f6ff, 220px -388.66667px #99ff00, -69px -27.66667px #ff0400, -111px -339.66667px #6200ff, 155px -237.66667px #00ddff, -152px -380.66667px #00ffd0, -50px -37.66667px #00ffdd, -95px -175.66667px #a6ff00, -88px 10.33333px #0d00ff, 112px -309.66667px #005eff, 69px -415.66667px #ff00a6, 168px -100.66667px #ff004c, -244px 24.33333px #ff6600, 97px -325.66667px #ff0066, -211px -182.66667px #00ffa2, 236px -126.66667px #b700ff, 140px -196.66667px #9000ff, 125px -175.66667px #00bbff, 118px -381.66667px #ff002f, 144px -111.66667px #ffae00, 36px -78.66667px #f600ff, -63px -196.66667px #c800ff, -218px -227.66667px #d4ff00, -134px -377.66667px #ea00ff, -36px -412.66667px #ff00d4, 209px -106.66667px #00fff2, 91px -278.66667px #000dff, -22px -191.66667px #9dff00, 139px -392.66667px #a6ff00, 56px -2.66667px #0099ff, -156px -276.66667px #ea00ff, -163px -233.66667px #00fffb, -238px -346.66667px #00ff73, 62px -363.66667px #0088ff, 244px -170.66667px #0062ff, 224px -142.66667px #b300ff, 141px -208.66667px #9000ff, 211px -285.66667px #ff6600, 181px -128.66667px #1e00ff, 90px -123.66667px #c800ff, 189px 70.33333px #00ffc8, -18px -383.66667px #00ff33, 100px -6.66667px #ff008c;
+   -moz-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+   -webkit-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+   -o-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+   -ms-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+   animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards; }
+
+   .pyro > .after {
+   -moz-animation-delay: 1.25s, 1.25s, 1.25s;
+   -webkit-animation-delay: 1.25s, 1.25s, 1.25s;
+   -o-animation-delay: 1.25s, 1.25s, 1.25s;
+   -ms-animation-delay: 1.25s, 1.25s, 1.25s;
+   animation-delay: 1.25s, 1.25s, 1.25s;
+   -moz-animation-duration: 1.25s, 1.25s, 6.25s;
+   -webkit-animation-duration: 1.25s, 1.25s, 6.25s;
+   -o-animation-duration: 1.25s, 1.25s, 6.25s;
+   -ms-animation-duration: 1.25s, 1.25s, 6.25s;
+   animation-duration: 1.25s, 1.25s, 6.25s; }
+
+   @-webkit-keyframes bang {
+   from {
+     box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+   @-moz-keyframes bang {
+   from {
+     box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+   @-o-keyframes bang {
+   from {
+     box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+   @-ms-keyframes bang {
+   from {
+     box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+   @keyframes bang {
+   from {
+     box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+   @-webkit-keyframes gravity {
+   to {
+     transform: translateY(200px);
+     -moz-transform: translateY(200px);
+     -webkit-transform: translateY(200px);
+     -o-transform: translateY(200px);
+     -ms-transform: translateY(200px);
+     opacity: 0; } }
+   @-moz-keyframes gravity {
+   to {
+     transform: translateY(200px);
+     -moz-transform: translateY(200px);
+     -webkit-transform: translateY(200px);
+     -o-transform: translateY(200px);
+     -ms-transform: translateY(200px);
+     opacity: 0; } }
+   @-o-keyframes gravity {
+   to {
+     transform: translateY(200px);
+     -moz-transform: translateY(200px);
+     -webkit-transform: translateY(200px);
+     -o-transform: translateY(200px);
+     -ms-transform: translateY(200px);
+     opacity: 0; } }
+   @-ms-keyframes gravity {
+   to {
+     transform: translateY(200px);
+     -moz-transform: translateY(200px);
+     -webkit-transform: translateY(200px);
+     -o-transform: translateY(200px);
+     -ms-transform: translateY(200px);
+     opacity: 0; } }
+   @keyframes gravity {
+   to {
+     transform: translateY(200px);
+     -moz-transform: translateY(200px);
+     -webkit-transform: translateY(200px);
+     -o-transform: translateY(200px);
+     -ms-transform: translateY(200px);
+     opacity: 0; } }
+   @-webkit-keyframes position {
+     0%, 19.9% {
+       margin-top: 10%;
+       margin-left: 40%; }
+
+     20%, 39.9% {
+       margin-top: 40%;
+       margin-left: 30%; }
+
+     40%, 59.9% {
+       margin-top: 20%;
+       margin-left: 70%; }
+
+     60%, 79.9% {
+       margin-top: 30%;
+       margin-left: 20%; }
+
+     80%, 99.9% {
+       margin-top: 30%;
+       margin-left: 80%; } }
+   @-moz-keyframes position {
+     0%, 19.9% {
+       margin-top: 10%;
+       margin-left: 40%; }
+
+     20%, 39.9% {
+       margin-top: 40%;
+       margin-left: 30%; }
+
+     40%, 59.9% {
+       margin-top: 20%;
+       margin-left: 70%; }
+
+     60%, 79.9% {
+       margin-top: 30%;
+       margin-left: 20%; }
+
+     80%, 99.9% {
+       margin-top: 30%;
+       margin-left: 80%; } }
+   @-o-keyframes position {
+     0%, 19.9% {
+       margin-top: 10%;
+       margin-left: 40%; }
+
+     20%, 39.9% {
+       margin-top: 40%;
+       margin-left: 30%; }
+
+     40%, 59.9% {
+       margin-top: 20%;
+       margin-left: 70%; }
+
+     60%, 79.9% {
+       margin-top: 30%;
+       margin-left: 20%; }
+
+     80%, 99.9% {
+       margin-top: 30%;
+       margin-left: 80%; } }
+   @-ms-keyframes position {
+   0%, 19.9% {
+     margin-top: 10%;
+     margin-left: 40%; }
+
+   20%, 39.9% {
+     margin-top: 40%;
+     margin-left: 30%; }
+
+   40%, 59.9% {
+     margin-top: 20%;
+     margin-left: 70%; }
+
+   60%, 79.9% {
+     margin-top: 30%;
+     margin-left: 20%; }
+
+   80%, 99.9% {
+     margin-top: 30%;
+     margin-left: 80%; } }
+   @keyframes position {
+      0%, 19.9% {
+       margin-top: 30%;
+       margin-left: 70%; }
+
+     20%, 39.9% {
+       margin-top: 10%;
+       margin-left: 10%; }
+
+     40%, 59.9% {
+       margin-top: 30%;
+       margin-left: 10%; }
+
+     60%, 79.9% {
+       margin-top: 30%;
+       margin-left: 50%; }
+
+     80%, 99.9% {
+       margin-top: 20%;
+       margin-left: 60%; }  }
     </style>
     <div class="introchoice">
       <div class="container">
@@ -378,16 +765,19 @@
       </div>
     </div>
 
-<div class="game">
-  <nav class="navbar navbar-default ">
-      <ul>
-      <li><a href="{% url 'index' %}">Home</a></li>
-      <li><a href="{% url 'gameapp:game1'%}">TicTacToe</a></li>
-      <li><a href="{% url 'gameapp:game2'%}">Connect Four</a></li>
-    </ul>
-  </nav>
 
-  <div class="container">
+<div class="game">
+
+
+  <div class="fireworks">
+    <div class="pyro">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+  </div>
+<div id="wrapper">
+
+  <div id="first_div" class="container">
       <div class="head"><h2 style="margin-left:27px;" id='head2'>Tic Tac Toe </h2><h1 >&#127919;</h1></div>
 
       <table align='center' class='board'>
@@ -407,8 +797,30 @@
           <td><button type="button" name="button"></button></td>
         </tr>
       </table>
-      <button class='btn btn-success btn-lg'id="Restart" type="button" name="button">Restart</button>
       <h5 id="head5"  ></h5>
+      </div>
+      <div id="second_div" >
+
+      <div class="scoreboard">
+
+        <button id="playerlabel"  type="button" name="button">Player</button><label for=""></label>
+        <button id="computerlabel" type="button" name="button">Computer</button><br>
+        <button id="score1"  type="button" name="button">00</button><label for=""></label>
+        <button id="score2" type="button" name="button">00</button>
+        <marquee
+        loop="-1"
+        behavior="scroll"
+        scrollamount="5"
+        scrolldelay="0"
+        direction="left"><p>&#9829; Roras Gamehub &#9829; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Either find a way or make one &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;In the middle of difficulty lies the oppurtunity  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;One day you will thank yourself for not giving up &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Life does not get easier you just get stronger &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Ever tried ever failed no matter try again fail again ,FAIL BETTER  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  #stayHomestaySafe &emsp;  </p>
+        </marquee>
+         <a href="{% url 'index' %}"><button id="homeicon"><i class="fa fa-home" ></i></button></a>
+        <button id="refreshicon"><i class="fa fa-refresh" ></i></button>
+        <button id="menuicon"> <i class="fa fa-bars" ></i></button>
+      </div>
+    </div>
+    </div>
+    <div style="clear:both;">
 
     </div>
 
@@ -434,12 +846,19 @@
       var win=false;
       var res=false;
       var idVar=null;
+      var env=true;
       var table = $('table tr');
       var game_status=true;
       var invalidInput=true;
+      var random=true;
       var mode=null;
+      var myMove=true;
+      var first=true;
       var header=document.querySelector('h2')
-      var restart=document.querySelector('#Restart')
+      var restart=document.querySelector('#refreshicon')
+      var menu=document.querySelector('#menuicon')
+      var score1=0;
+      var score2=0;
 
 
 
@@ -465,6 +884,58 @@
 
       //end
 
+
+      //menuicon
+
+      function menuIcon()
+      {
+        for(var row=0;row<4;row++)
+        {
+          for(var col=0;col<4;col++)
+          {
+            InterchangeVar(row,col);
+            InterchangeColor(row,col);
+          }
+        }
+        changeCheck();
+        InterchangeHeadercolor();
+        player = "Player"
+        playerVar='X';
+        playerColor= '#ff2919';
+        computer = 'Computer'
+        computerVar='O';
+        computerColor= '#0493e0'
+        currentName = player;
+        currentVar=playerVar;
+        currentColor=playerColor;
+        myMove=true;
+        score1=0;
+        score2=0;
+        res=false;
+        $('#score2').text('0'+score2)
+        $('#score1').text('0'+score1)
+        $('h2').text("Tic Tac Toe ")
+        $('h5').text("Gameplay:  Player 'X'  Computer 'O'")
+        document.body.style.backgroundImage = 'url("{%static "images/Image7.jpg"%}")';
+        w3.hide('.game')
+        w3.show('.modechoice')
+        return game_status=true;
+      }
+      menu.addEventListener('click',menuIcon)
+
+      //end
+
+      //Hide fireworks
+
+      function fireworksscreen()
+      {
+        w3.hide('.fireworks')
+      }
+      fireworksscreen()
+
+      //End
+
+
       //openChoice
 
       function openChoice()
@@ -480,13 +951,15 @@
 
       function GamemodeEasy()
       {
-          if (typeof window.orientation !== 'undefined')
+
+          if (typeof window.orientation === 'undefined')
           {
-              document.body.style.backgroundImage = 'url("{%static "images/Image11.jpg"%}")';
+              document.body.style.backgroundImage = 'url("{%static "images/Game1bg.jpg"%}")';
           }
           else
           {
-              document.body.style.backgroundImage = 'url("{%static "images/Image10.jpg"%}")';
+              document.body.style.backgroundColor = 'rgb(246, 211, 91)';
+              document.body.style.backgroundImage = 'none';
           }
 
         w3.hide('.modechoice')
@@ -502,14 +975,15 @@
 
       function GamemodeMedium()
       {
-          if (typeof window.orientation !== 'undefined')
-          {
-              document.body.style.backgroundImage = 'url("{%static "images/Image11.jpg"%}")';
-          }
-          else
-          {
-              document.body.style.backgroundImage = 'url("{%static "images/Image10.jpg"%}")';
-          }
+        if (typeof window.orientation === 'undefined')
+        {
+            document.body.style.backgroundImage = 'url("{%static "images/Game1bg.jpg"%}")';
+        }
+        else
+        {
+            document.body.style.backgroundColor = 'rgb(246, 211, 91)';
+            document.body.style.backgroundImage = 'none';
+        }
         w3.hide('.modechoice')
         w3.show('.game')
         return mode='medium'
@@ -523,14 +997,15 @@
 
       function GamemodeHard()
       {
-         if (typeof window.orientation !== 'undefined')
-          {
-              document.body.style.backgroundImage = 'url("{%static "images/Image11.jpg"%}")';
-          }
-          else
-          {
-              document.body.style.backgroundImage = 'url("{%static "images/Image10.jpg"%}")';
-          }
+        if (typeof window.orientation === 'undefined')
+        {
+            document.body.style.backgroundImage = 'url("{%static "images/Game1bg.jpg"%}")';
+        }
+        else
+        {
+            document.body.style.backgroundColor = 'rgb(246, 211, 91)';
+            document.body.style.backgroundImage = 'none';
+        }
         w3.hide('.modechoice')
         w3.show('.game')
         return mode='hard'
@@ -571,12 +1046,14 @@
       {
         if(idVar!=null)
         {
+          w3.hide('.fireworks')
           clearInterval(idVar);
           return idVar=null;
         }
         else if (win)
         {
             idVar = setInterval("changeHeadercolor()",500);
+            setTimeout(function(){w3.show('.fireworks')},600);
             changeWin();
             return idVar;
         }
@@ -652,6 +1129,7 @@
       {
         if (res===true)
         {
+            setTimeout(function(){
             var currentName = computer;
             var currentColor = computerColor;
             var currentVar = computerVar;
@@ -668,18 +1146,17 @@
             }
             changeVar(row,col,currentVar);
             changeColor(row,col,currentColor);
-            if (horizontalWinCheck() || verticalWinCheck()|| diagonalWinCheck())
-            {
-              gameEnd(currentName);
-              changeCheck();
-              return(game_status=false);
-            }
-            else if(DrawCheck())
-            {
-              gameDraw();
-              return(game_status=false);
-            }
+          }, 600);
         }
+        else {
+          changefirstMove();
+          return random=true;
+        }
+      }
+
+      function changefirstMove()
+      {
+        return first=true;
       }
 
 
@@ -704,6 +1181,7 @@
           $('h2').text("Tic Tac Toe ")
           $('h5').text("Gameplay:  Player 'O'  Computer 'X'")
         }
+
         changeCheck();
         InterchangeHeadercolor();
         exchangeCompVar();
@@ -711,6 +1189,10 @@
         exchangeCompColor();
         exchangePlayerColor();
         restartMove();
+        if(myMove===false)
+        {
+          changMove();
+        }
         return game_status=true;
       }
       restart.addEventListener('click',clearBoard)
@@ -763,7 +1245,7 @@
       }
 
 
-      function returnText(rowIndex,colIndex,color)
+      function returnText(rowIndex,colIndex)
       {
         return table.eq(rowIndex).find('td').eq(colIndex).text();
       }
@@ -771,7 +1253,7 @@
 
       function checkInput(rowIndex,colIndex)
       {
-        if(returnText(rowIndex,colIndex)!==playerVar &&returnText(rowIndex,colIndex)!==computerVar)
+        if(returnText(rowIndex,colIndex)!==playerVar &&returnText(rowIndex,colIndex)!==computerVar && returnText(rowIndex,colIndex)!==undefined)
         {
           return(invalidInput=true)
         }
@@ -858,13 +1340,30 @@
             {
               $('h5').text("Press RESTART and Enjoy playing again ")
               $('h2').text("Kudos! Amazing job..")
-
+              score1++;
+              if (score1<10)
+              {
+                 $('#score1').text('0'+score1)
+              }
+              else
+              {
+                  $('#score1').text(score1)
+              }
               return win=true;
             }
             else
             {
               $('h5').text("Press RESTART and give another stab")
               $('h2').text("Oops! Tough break.. ")
+              score2++;
+              if (score2<10)
+              {
+                 $('#score2').text('0'+score2)
+              }
+              else
+              {
+                  $('#score2').text(score2)
+              }
               return win=false;
             }
 
@@ -928,106 +1427,6 @@
       //ComputerInputMedium
 
 
-      function randomNum2(max)
-      {
-        for(var row=0;row<4;row++)
-        {
-          var col=0;
-            if(compMatchCheck(returnText(row,col),returnText(row,col+1),returnText(row,col+2))==='one')
-            {
-              var colOne=0;
-              return[getRow(row),getColn(colOne)];
-            }
-            else if(compMatchCheck(returnText(row,col),returnText(row,col+1),returnText(row,col+2))==='two')
-            {
-              var colTwo=1;
-              return[getRow(row),getColn(colTwo)];
-            }
-            else if (compMatchCheck(returnText(row,col),returnText(row,col+1),returnText(row,col+2))==='three')
-            {
-              var colThree=2;
-              return[getRow(row),getColn(colThree)];
-            }
-            else
-            {
-              continue;
-            }
-        }
-        for(var col=0;col<4;col++)
-        {
-          var row=0;
-          if(compMatchCheck(returnText(row,col),returnText(row+1,col),returnText(row+2,col))==='one')
-          {
-            var rowZero=0;
-            return[getRow(rowZero),getColn(col)];
-          }
-          else if(compMatchCheck(returnText(row,col),returnText(row+1,col),returnText(row+2,col))==='two')
-          {
-              var rowOne=1;
-              return[getRow(rowOne),getColn(col)];
-          }
-          else if (compMatchCheck(returnText(row,col),returnText(row+1,col),returnText(row+2,col))==='three')
-          {
-              var rowTwo=2
-              return[getRow(rowTwo),getColn(col)];
-          }
-          else
-          {
-            continue;
-          }
-        }
-        var row=0;
-        var col=0;
-            if (compMatchCheck(returnText(row,col), returnText(row+1,col+1) ,returnText(row+2,col+2))==='one')
-            {
-              var rowIndx=0;
-              var colIndx=0;
-              return[getRow(rowIndx),getColn(colIndx)];
-
-            }
-            else if (compMatchCheck(returnText(row,col), returnText(row+1,col+1) ,returnText(row+2,col+2))==='two')
-            {
-              var rowIndx=1;
-              var colIndx=1;
-              return[getRow(rowIndx),getColn(colIndx)];
-
-            }
-            else if (compMatchCheck(returnText(row,col), returnText(row+1,col+1) ,returnText(row+2,col+2))==='three')
-            {
-              var rowIndx=2;
-              var colIndx=2;
-              return[getRow(rowIndx),getColn(colIndx)];
-
-            }
-            else if (compMatchCheck(returnText(row,col+2), returnText(row+1,col+1) ,returnText(row+2,col))==='one')
-            {
-              var rowIndx=0;
-              var colIndx=2;
-              return[getRow(rowIndx),getColn(colIndx)];
-
-            }
-            else if (compMatchCheck(returnText(row,col+2), returnText(row+1,col+1) ,returnText(row+2,col))==='two')
-            {
-              var rowIndx=1;
-              var colIndx=1;
-              return[getRow(rowIndx),getColn(colIndx)];
-
-            }
-            else if (compMatchCheck(returnText(row,col+2), returnText(row+1,col+1) ,returnText(row+2,col))==='three')
-            {
-              var rowIndx=2;
-              var colIndx=0;
-              return[getRow(rowIndx),getColn(colIndx)];
-            }
-            return [Math.floor(Math.random() * Math.floor(max)), Math.floor(Math.random() * Math.floor(max))];
-      }
-
-
-      //End
-
-
-      //CompuetrInput
-
       function getRow(rowIndex)
       {
         return rowIndex;
@@ -1074,7 +1473,7 @@
       }
 
 
-      function randomNum3(max)
+      function randomNum2(max)
       {
         for(var row=0;row<4;row++)
         {
@@ -1263,12 +1662,252 @@
       //End
 
 
+      //CompuetrInput hard
+      function changeEnv()
+      {
+        if (env===false)
+        {
+          return env=true;
+        }
+        else if (env===true)
+        {
+          return env=false;
+        }
+
+      }
+      function randomNum3()
+      {
+        if (returnText(1,1)==='')
+        {
+          var rowIndx=1;
+          var colIndx=1;
+          return [getRow(rowIndx),getColn(colIndx)];
+        }
+        else
+        {
+          if (env)
+          {
+            var rowIndx=2;
+            var colIndx=2;
+            changeEnv()
+          }
+          else
+          {
+            var rowIndx=0;
+            var colIndx=0;
+            changeEnv()
+          }
+
+          return [getRow(rowIndx),getColn(colIndx)];
+        }
+      }
+
+      function horizontalWinner()
+      {
+        for(var row=0;row<4;row++)
+        {
+          var col=0;
+            if(colorMatchCheck(returnText(row,col),returnText(row,col+1),returnText(row,col+2)))
+            {
+              return returnText(row,col);
+            }
+            else
+            {
+              continue;
+            }
+        }
+        return false;
+      }
+
+
+      function verticalWinner()
+      {
+        for(var col=0;col<4;col++)
+        {
+          var row=0;
+            if(colorMatchCheck(returnText(row,col),returnText(row+1,col),returnText(row+2,col)))
+            {
+              return returnText(row,col);
+            }
+            else
+            {
+              continue;
+            }
+        }
+        return false
+      }
+
+
+      function diagonalWinner()
+      {
+          var row=0;
+          var col=0;
+              if (colorMatchCheck(returnText(row,col), returnText(row+1,col+1) ,returnText(row+2,col+2)))
+              {
+                return returnText(row,col);
+              }
+              else if (colorMatchCheck(returnText(row,col+2), returnText(row+1,col+1) ,returnText(row+2,col)))
+              {
+                return returnText(row,col+2);
+              }
+              else
+              {
+                return false;
+              }
+      }
+
+      function checkWinner()
+      {
+        if (horizontalWinCheck())
+        {
+          result=horizontalWinner()
+          return result;
+        }
+        else if (verticalWinCheck())
+        {
+          result=verticalWinner()
+          return result;
+        }
+        else if (diagonalWinCheck())
+        {
+          result=diagonalWinner()
+          return result;
+        }
+        else if (DrawCheck())
+        {
+          result='tie'
+          return result;
+        }
+        else
+        {
+          return 'null'
+        }
+
+      }
+
+      function minimax(depth,isMaximising)
+      {
+
+        var match=checkWinner()
+        if (match!=='null')
+        {
+          if (match===computerVar)
+          {
+              var score=10-depth;
+              return score;
+          }
+          else if (match===playerVar)
+          {
+              var score=-10+depth;
+              return score;
+          }
+          else if (match==='tie')
+          {
+              var score=0;
+              return score;
+          }
+        }
+
+        if(isMaximising)
+        {
+          var bestScore=-Infinity;
+          for (var row = 0; row < 3; row++)
+          {
+            for(var col=0;col<3;col++)
+            {
+              if(returnText(row,col)==='')
+              {
+                  changeVar(row,col,computerVar);
+                  score=minimax(depth+1,false);
+                  InterchangeVar(row,col)
+
+                  if(score>bestScore)
+                  {
+                    bestScore=score;
+                  }
+              }
+            }
+          }
+          return bestScore;
+        }
+        else
+        {
+          var bestScore=Infinity;
+          for (var row = 0; row < 3; row++)
+          {
+            for(var col=0;col<3;col++)
+            {
+              if(returnText(row,col)==='')
+              {
+                  changeVar(row,col,playerVar);
+
+                  score=minimax(depth+1,true);
+
+                  InterchangeVar(row,col)
+                  if(score<bestScore)
+                  {
+                    bestScore=score;
+                  }
+              }
+            }
+          }
+          return bestScore;
+        }
+      }
+
+
+      function hardmove()
+      {
+        var bestScore=-Infinity;
+        var bestRow,bestCol;
+        for (var row = 0; row < 3; row++)
+        {
+          for(var col=0;col<3;col++)
+          {
+            if(returnText(row,col)==='')
+            {
+                changeVar(row,col,computerVar);
+                score=minimax(0,false)
+                InterchangeVar(row,col)
+                if(score>bestScore)
+                {
+                  bestScore=score;
+                  bestRow=row;
+                  bestCol=col;
+                }
+            }
+          }
+        }
+        return [getRow(bestRow),getColn(bestCol)];
+      }
+
+
+
+
+      //End
+
+
       //Main function
+      function changMove()
+      {
+        if (myMove===false)
+        {
+          return myMove=true;
+        }
+        else if (myMove===true)
+        {
+          return myMove=false;
+        }
+      }
+
+
 
       $('h5').text("Gameplay:  Player 'X'  Computer 'O'")
+    $(document).ready(function(){
       $('.board button').on('click',function()
       {
-        console.log(mode)
+        if (myMove)
+        {
         var currentName = player;
         var currentVar=playerVar;
         var currentColor=playerColor;
@@ -1277,10 +1916,11 @@
           var col = $(this).closest('td').index();
           var row = $(this).closest('tr').index();
           checkInput(row,col);
-          changeVar(row,col,currentVar);
 
           if(invalidInput)
           {
+            changMove()
+
             changeVar(row,col,currentVar);
             changeColor(row,col,currentColor);
             if (horizontalWinCheck() || verticalWinCheck()|| diagonalWinCheck())
@@ -1294,7 +1934,10 @@
               gameDraw();
               return(game_status=false);
             }
+
+
             //Computermove
+            setTimeout(function(){
             if(game_status)
             {
               currentName = computer;
@@ -1330,21 +1973,35 @@
               }
               else if(mode==='hard')
               {
-                var cell =randomNum3(3)
-                var row = cell[0];
-                var col = cell[1];
-                checkInput(row,col);
-                while (invalidInput != true)
+                if (random)
                 {
-                  var cell =randomNum3(3)
+                  var cell =randomNum3()
                   var row = cell[0];
                   var col = cell[1];
-                  checkInput(row,col);
+                  random=false;
                 }
-              }
+                else
+                {
+                  var cell =hardmove()
+                  var row = cell[0];
+                  var col = cell[1];
+                }
 
-              changeVar(row,col,currentVar);
-              changeColor(row,col,currentColor);
+
+              }
+              if (res===true && first===true)
+              {
+                changeVar(row,col,currentVar);
+                changeColor(row,col,currentColor);
+                first=false;
+              }
+              else
+              {
+
+                changeVar(row,col,currentVar);
+                changeColor(row,col,currentColor);
+
+              }
               if (horizontalWinCheck() || verticalWinCheck()|| diagonalWinCheck())
               {
                 gameEnd(currentName);
@@ -1357,9 +2014,13 @@
                 return(game_status=false);
               }
             }
+            changMove();
+            },600);
           }
         }
+      }
       })
+    })
 
       </script>
 
