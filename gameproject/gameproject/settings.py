@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
+from secrets import SECRET_KEY as secret
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -21,7 +21,7 @@ STATIC_DIR = os.path.join(BASE_DIR,"static")
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'j6bf92iabw%xc%+gwpttz_m(4^*py33$v_!ogj%d5vc0$qpzpa'
+SECRET_KEY = secret
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
